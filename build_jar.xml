@@ -1,0 +1,17 @@
+<project name="antsimple" default="dist-src" basedir=".">
+
+	<target name="dist-src" description="generate the distribution">
+		<jar jarfile="schreiber.clock.jar">
+			<zipgroupfileset dir="libs" includes="**/*.jar" />
+			<manifest>
+				<attribute name="Main-Class" value="schreiber.clock.DisplayBasicClock" />
+			</manifest>
+			<fileset dir="./bin">
+				<include name="schreiber/clock/*.class" />
+				<include name="schreiber/clock/*.txt" />
+			</fileset>
+		</jar>
+
+	</target>
+
+</project>
