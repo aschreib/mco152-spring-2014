@@ -1,0 +1,16 @@
+<project name="antsimple" default="dist-src" basedir=".">
+
+	<target name="dist-src" description="generate the distribution">
+		<jar jarfile="schreiber.earthquake.jar">
+			<zipgroupfileset dir="libs" includes="**/*.jar" />
+			<manifest>
+				<attribute name="Main-Class" value="schreiber.earthquake.ShowEarthquakes" />
+			</manifest>
+			<fileset dir="./bin">
+				<include name="schreiber/earthquakes/*.class" />
+			</fileset>
+		</jar>
+
+	</target>
+
+</project>
